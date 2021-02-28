@@ -22,6 +22,10 @@ bin-release/
 /node_modules
 /.pnp
 .pnp.js
+.history.js
+
+# history
+/.history
 
 # testing
 /coverage
