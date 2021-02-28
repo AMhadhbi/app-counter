@@ -3,7 +3,7 @@ const  Navbar = () => {
     return ( 
     <nav className="navbar navbar-light bg-light h3">
         <span>
-            <img className ="mr-2" src='images/me.png' alt=""
+            <img className ="rounded mr-2" src='images/me.png' alt=""
             style={{width: "40px", height: "40px", borderRadius :"40%"}}
             />
             Achraf Counter
