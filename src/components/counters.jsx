@@ -13,7 +13,7 @@ class Counters extends Component {
         return ( 
             <div>
                 <button className='btn btn-info'>Reset</button>
-                {this.state.counters.map((item) => (<Counter key={item.id} />)
+                {this.state.counters.map((item) => (<Counter key={item.id} value={item.value} />)
 
                 )}
                 
