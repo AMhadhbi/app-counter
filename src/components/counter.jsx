@@ -5,7 +5,7 @@ class Counter extends Component {
             <div className="row">
                 <div className="col-1">
                     <h3>
-                        <span className="badge badge-warning ">Zero</span> 
+                        <span className="badge badge-warning ">{this.props.value}</span> 
                     </h3>
                 </div>
                 <div className="col">
