@@ -6,17 +6,23 @@ class Counters extends Component {
           {id :1, value:4},
           {id :2, value:0},
           {id :3, value:0},
-          {id :4, value:0},
+          {id :4, value:2},
         ]
     };
+    handelReset = () => {
+        const counters = this.state.counters.map((c) => {
+            c.value = 0;
+            return c;
+        });
+        //this.setState({ counters: counters})
+        this.setState({counters});
+    }
     render() { 
         return ( 
             <div>
-                <button className='btn btn-info'>Reset</button>
+                <button className='btn btn-info mb-2' onClick={this.handelReset}>Reset</button>
                 {this.state.counters.map((item) => (<Counter key={item.id} value={item.value} />)
-
                 )}
-                
             </div>
          );
     }
