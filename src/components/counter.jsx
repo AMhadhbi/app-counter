@@ -17,7 +17,7 @@ class Counter extends Component {
                             onClick = {(e) => this.props.onDecrement(this.props.id)}
                             disabled ={!(this.props.value)? true : false}>
                                 <i className="fa fa-minus" aria-hidden="true"></i></button>
-                    <button className="btn btn-danger btn-sm" onClick= { (e) => this.props}><i className="fa fa-trash" aria-hidden="true"></i></button>
+                    <button className="btn btn-danger btn-sm" onClick= { (e) => this.props.onDelete(this.props.id)}><i className="fa fa-trash" aria-hidden="true"></i></button>
                 </div>
             </div>
          );
