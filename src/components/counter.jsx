@@ -5,16 +5,28 @@ class Counter extends Component {
             <div className="row">
                 <div className="col-1">
                     <h3>
-                        <span className="badge badge-warning ">{this.props.value}</span> 
+                        <span className={this.getBadgetClass(this.props.value)}>{this.getValueFormat(this.props.value)}</span> 
                     </h3>
                 </div>
                 <div className="col">
-                    <button className="btn btn-secondary"><i className="fa fa-plus" aria-hidden="true"></i></button>
-                    <button className="btn btn-secondary mr-2 ml-2"><i className="fa fa-minus" aria-hidden="true"></i></button>
-                    <button className="btn btn-danger"><i className="fa fa-trash" aria-hidden="true"></i></button>
+                    <button className="btn btn-secondary btn-sm" onClick ={(e) => this.props.onIncrement(this.props.id)}>
+                        <i className="fa fa-plus" aria-hidden="true">
+                    </i>
+                    </button>
+                    <button className="btn btn-secondary btn-sm mr-2 ml-2" 
+                            onClick = {(e) => this.props.onDecrement(this.props.id)}
+                            disabled ={!(this.props.value)? true : false}>
+                                <i className="fa fa-minus" aria-hidden="true"></i></button>
+                    <button className="btn btn-danger btn-sm" onClick= { (e) => this.props.onDelete(this.props.id)}><i className="fa fa-trash" aria-hidden="true"></i></button>
                 </div>
             </div>
          );
+    }
+    getBadgetClass(value){
+        return (value) ? "badge badge-primary" : "badge badge-warning";
+    }
+    getValueFormat(value){
+        return (value) ? value : "Zero";
     }
 }
  
