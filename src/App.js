@@ -37,6 +37,16 @@ class App extends Component {
   handleTotal = () => {
    const result = this.state.counters.reduce((total, currentValue) => total = total + currentValue.value,0);
    return result;
+   /* 
+   
+   const movies = [...this.state.counters];
+   let tot = 0;
+   for let movie of movies{
+   tot += movie.value ;
+   }
+   return tot;
+   
+   */
   };
   render() { 
     return (
